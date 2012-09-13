@@ -1,0 +1,30 @@
+client:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:Cliente:index" }
+
+client_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:Cliente:show" }
+
+client_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:Cliente:new" }
+
+client_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:Cliente:create" }
+    requirements: { _method: post }
+
+client_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:Cliente:edit" }
+
+client_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:Cliente:update" }
+    requirements: { _method: post }
+
+client_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:Cliente:delete" }
+    requirements: { _method: post }

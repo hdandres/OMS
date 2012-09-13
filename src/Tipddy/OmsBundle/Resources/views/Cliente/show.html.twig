@@ -1,0 +1,101 @@
+<h1>Cliente</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>{{ entity.nombre }}</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>{{ entity.apellido }}</td>
+        </tr>
+        <tr>
+            <th>Descripcion</th>
+            <td>{{ entity.descripcion }}</td>
+        </tr>
+        <tr>
+            <th>Razonsocial</th>
+            <td>{{ entity.razonSocial }}</td>
+        </tr>
+        <tr>
+            <th>Tipo</th>
+            <td>{{ entity.tipo }}</td>
+        </tr>
+        <tr>
+            <th>Fechafundacion</th>
+            <td>{{ entity.fechaFundacion|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Direccion</th>
+            <td>{{ entity.direccion }}</td>
+        </tr>
+        <tr>
+            <th>Fonofijo</th>
+            <td>{{ entity.fonoFijo }}</td>
+        </tr>
+        <tr>
+            <th>Fonomovil</th>
+            <td>{{ entity.fonoMovil }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ entity.email }}</td>
+        </tr>
+        <tr>
+            <th>Sucursal</th>
+            <td>{{ entity.sucursal }}</td>
+        </tr>
+        <tr>
+            <th>Nombreencargado</th>
+            <td>{{ entity.nombreEncargado }}</td>
+        </tr>
+        <tr>
+            <th>Nombrecomercial</th>
+            <td>{{ entity.nombreComercial }}</td>
+        </tr>
+        <tr>
+            <th>Reprelegal</th>
+            <td>{{ entity.repreLegal }}</td>
+        </tr>
+        <tr>
+            <th>Reprerut</th>
+            <td>{{ entity.repreRut }}</td>
+        </tr>
+        <tr>
+            <th>Reprenombre</th>
+            <td>{{ entity.repreNombre }}</td>
+        </tr>
+        <tr>
+            <th>Reprefono</th>
+            <td>{{ entity.repreFono }}</td>
+        </tr>
+        <tr>
+            <th>Repredireccion</th>
+            <td>{{ entity.repreDireccion }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('client') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('client_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('client_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

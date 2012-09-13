@@ -1,0 +1,71 @@
+<h1>Cliente list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Descripcion</th>
+            <th>Razonsocial</th>
+            <th>Tipo</th>
+            <th>Fechafundacion</th>
+            <th>Direccion</th>
+            <th>Fonofijo</th>
+            <th>Fonomovil</th>
+            <th>Email</th>
+            <th>Sucursal</th>
+            <th>Nombreencargado</th>
+            <th>Nombrecomercial</th>
+            <th>Reprelegal</th>
+            <th>Reprerut</th>
+            <th>Reprenombre</th>
+            <th>Reprefono</th>
+            <th>Repredireccion</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('client_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.nombre }}</td>
+            <td>{{ entity.apellido }}</td>
+            <td>{{ entity.descripcion }}</td>
+            <td>{{ entity.razonSocial }}</td>
+            <td>{{ entity.tipo }}</td>
+            <td>{% if entity.fechaFundacion %}{{ entity.fechaFundacion|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.direccion }}</td>
+            <td>{{ entity.fonoFijo }}</td>
+            <td>{{ entity.fonoMovil }}</td>
+            <td>{{ entity.email }}</td>
+            <td>{{ entity.sucursal }}</td>
+            <td>{{ entity.nombreEncargado }}</td>
+            <td>{{ entity.nombreComercial }}</td>
+            <td>{{ entity.repreLegal }}</td>
+            <td>{{ entity.repreRut }}</td>
+            <td>{{ entity.repreNombre }}</td>
+            <td>{{ entity.repreFono }}</td>
+            <td>{{ entity.repreDireccion }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('client_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('client_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('client_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>

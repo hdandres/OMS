@@ -1,0 +1,40 @@
+{# src/Tipddy/OmsBundle/Resources/views/Cliente/cliente.html.twig #}
+{% extends 'TipddyOmsBundle::base.html.twig' %}
+
+{% block title %}Cliente{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Maestro Cliente</h1>
+    </header>
+
+    <p></p>
+
+    <form action="{{ path('TipddyOmsBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blogger">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.descripcion) }}
+        {{ form_row(form.razon_social) }}
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.tipo) }}
+        {{ form_row(form.fecha_fundacion) }}
+        {{ form_row(form.direccion) }}
+        {{ form_row(form.comuna) }}
+        {{ form_row(form.region) }}
+        {{ form_row(form.fono_fijo) }}
+        {{ form_row(form.fono_movil) }}
+        {{ form_row(form.correo) }}
+        {{ form_row(form.sucursal) }}
+        {{ form_row(form.nombre_encargado) }}
+        {{ form_row(form.nombre_comercial) }}
+        {{ form_row(form.repre_legal) }}
+        {{ form_row(form.repre_rut) }}
+        {{ form_row(form.repre_nombre) }}
+        {{ form_row(form.repre_fono) }}
+        {{ form_row(form.repre_direccion) }}
+        {{ form_row(form.repre_comuna) }}
+        {{ form_row(form.repre_region) }}
+            
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

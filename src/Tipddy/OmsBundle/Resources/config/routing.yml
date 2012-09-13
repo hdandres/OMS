@@ -1,0 +1,8 @@
+TipddyOmsBundle_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: TipddyOmsBundle:Default:index }
+    
+TipddyOmsBundle_cliente:
+    resource: "@TipddyOmsBundle/Resources/config/routing/cliente.yml"
+    prefix:   /client
+

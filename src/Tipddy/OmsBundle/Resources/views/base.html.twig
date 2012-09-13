@@ -1,0 +1,7 @@
+{# src/Tipddy/OmsBundle/Resources/views/base.html.twig #}
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/omsbundle/css/omshuman.css') }}" type="text/css" rel="stylesheet" />
+{% endblock %}
