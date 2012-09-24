@@ -1,0 +1,97 @@
+{% extends 'TipddyOmsBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>Curso</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Nombrecurso</th>
+            <td>{{ entity.nombreCurso }}</td>
+        </tr>
+        <tr>
+            <th>Categoria</th>
+            <td>{{ entity.categoria }}</td>
+        </tr>
+        <tr>
+            <th>Modalidadcurso</th>
+            <td>{{ entity.modalidadCurso }}</td>
+        </tr>
+        <tr>
+            <th>Tipoactividad</th>
+            <td>{{ entity.tipoActividad }}</td>
+        </tr>
+        <tr>
+            <th>Codigosence</th>
+            <td>{{ entity.codigoSence }}</td>
+        </tr>
+        <tr>
+            <th>Porcasistencia</th>
+            <td>{{ entity.porcAsistencia }}</td>
+        </tr>
+        <tr>
+            <th>Notaminima</th>
+            <td>{{ entity.notaMinima }}</td>
+        </tr>
+        <tr>
+            <th>Horaminima</th>
+            <td>{{ entity.horaMinima }}</td>
+        </tr>
+        <tr>
+            <th>Horatotal</th>
+            <td>{{ entity.horaTotal }}</td>
+        </tr>
+        <tr>
+            <th>Fundamentaciontec</th>
+            <td>{{ entity.fundamentacionTec }}</td>
+        </tr>
+        <tr>
+            <th>Poblacionobjetivo</th>
+            <td>{{ entity.poblacionObjetivo }}</td>
+        </tr>
+        <tr>
+            <th>Objgenerales</th>
+            <td>{{ entity.objGenerales }}</td>
+        </tr>
+        <tr>
+            <th>Numparticipante</th>
+            <td>{{ entity.numParticipante }}</td>
+        </tr>
+        <tr>
+            <th>Metodoensenanza</th>
+            <td>{{ entity.metodoEnsenanza }}</td>
+        </tr>
+        <tr>
+            <th>Evaluacion</th>
+            <td>{{ entity.evaluacion }}</td>
+        </tr>
+        <tr>
+            <th>Infraestructura</th>
+            <td>{{ entity.infraestructura }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('course') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('course_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('course_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

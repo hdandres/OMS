@@ -1,0 +1,30 @@
+outsidestaff:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:index" }
+
+outsidestaff_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:show" }
+
+outsidestaff_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:new" }
+
+outsidestaff_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:create" }
+    requirements: { _method: post }
+
+outsidestaff_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:edit" }
+
+outsidestaff_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:update" }
+    requirements: { _method: post }
+
+outsidestaff_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:PersonalExterno:delete" }
+    requirements: { _method: post }

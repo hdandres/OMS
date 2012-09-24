@@ -6,3 +6,30 @@ TipddyOmsBundle_cliente:
     resource: "@TipddyOmsBundle/Resources/config/routing/cliente.yml"
     prefix:   /client
 
+TipddyOmsBundle_course:
+    resource: "@TipddyOmsBundle/Resources/config/routing/curso.yml"
+    prefix:   /course
+
+TipddyOmsBundle_otec:
+    resource: "@TipddyOmsBundle/Resources/config/routing/otec.yml"
+    prefix:   /otec
+    
+TipddyOmsBundle_participant:
+    resource: "@TipddyOmsBundle/Resources/config/routing/participante.yml"
+    prefix:   /participant
+
+TipddyOmsBundle_classbook:
+    resource: "@TipddyOmsBundle/Resources/config/routing/libroclase.yml"
+    prefix:   /classbook
+
+TipddyOmsBundle_coursematerial:
+    resource: "@TipddyOmsBundle/Resources/config/routing/materialcurso.yml"
+    prefix:   /coursematerial
+
+TipddyOmsBundle_purchaseorder:
+    resource: "@TipddyOmsBundle/Resources/config/routing/ordencompra.yml"
+    prefix:   /purchaseorder
+
+TipddyOmsBundle_outsidestaff:
+    resource: "@TipddyOmsBundle/Resources/config/routing/personalexterno.yml"
+    prefix:   /outsidestaff

@@ -1,0 +1,30 @@
+otec:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:Otec:index" }
+
+otec_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:Otec:show" }
+
+otec_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:Otec:new" }
+
+otec_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:Otec:create" }
+    requirements: { _method: post }
+
+otec_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:Otec:edit" }
+
+otec_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:Otec:update" }
+    requirements: { _method: post }
+
+otec_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:Otec:delete" }
+    requirements: { _method: post }

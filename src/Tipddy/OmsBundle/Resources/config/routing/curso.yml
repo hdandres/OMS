@@ -1,0 +1,30 @@
+course:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:Curso:index" }
+
+course_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:Curso:show" }
+
+course_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:Curso:new" }
+
+course_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:Curso:create" }
+    requirements: { _method: post }
+
+course_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:Curso:edit" }
+
+course_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:Curso:update" }
+    requirements: { _method: post }
+
+course_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:Curso:delete" }
+    requirements: { _method: post }

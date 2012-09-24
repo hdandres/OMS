@@ -26,12 +26,11 @@ class LibroClase
     */
     private $descripcion;
 
-    /**
-     * @ORM\OneToOne(targetEntity="Curso", mappedBy="libroId")
-     *
-    */    
-    private $cursoId;    
-
+     /**
+      * @ORM\OneToOne(targetEntity="Curso")
+      * @ORM\JoinColumn(name="curso_id", referencedColumnName="id")
+     */
+     private $curso;
 
     /**
      * Get id
@@ -63,23 +62,25 @@ class LibroClase
         return $this->descripcion;
     }
 
+   
+
     /**
-     * Set cursoId
+     * Set curso
      *
-     * @param Tipddy\OmsBundle\Entity\Curso $cursoId
+     * @param Tipddy\OmsBundle\Entity\Curso $curso
      */
-    public function setCursoId(\Tipddy\OmsBundle\Entity\Curso $cursoId)
+    public function setCurso(\Tipddy\OmsBundle\Entity\Curso $curso)
     {
-        $this->cursoId = $cursoId;
+        $this->curso = $curso;
     }
 
     /**
-     * Get cursoId
+     * Get curso
      *
      * @return Tipddy\OmsBundle\Entity\Curso 
      */
-    public function getCursoId()
+    public function getCurso()
     {
-        return $this->cursoId;
+        return $this->curso;
     }
 }

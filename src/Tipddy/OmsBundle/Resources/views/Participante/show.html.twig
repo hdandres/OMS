@@ -1,0 +1,53 @@
+<h1>Participante</h1>
+
+<table class="record_properties">
+    <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ entity.id }}</td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>{{ entity.nombre }}</td>
+        </tr>
+        <tr>
+            <th>Apellido_pat</th>
+            <td>{{ entity.apellidopat }}</td>
+        </tr>
+        <tr>
+            <th>Apellido_mat</th>
+            <td>{{ entity.apellidomat }}</td>
+        </tr>
+        <tr>
+            <th>Rut</th>
+            <td>{{ entity.rut }}</td>
+        </tr>
+        <tr>
+            <th>Fechanacimiento</th>
+            <td>{{ entity.fechaNacimiento|date('Y-m-d H:i:s') }}</td>
+        </tr>
+        <tr>
+            <th>Direccion</th>
+            <td>{{ entity.direccion }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ul class="record_actions">
+    <li>
+        <a href="{{ path('participant') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('participant_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('participant_delete', { 'id': entity.id }) }}" method="post">
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>

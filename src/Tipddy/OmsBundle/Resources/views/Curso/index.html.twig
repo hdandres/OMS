@@ -1,0 +1,71 @@
+{% extends 'TipddyOmsBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>Curso list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombrecurso</th>
+            <th>Categoria</th>
+            <th>Modalidadcurso</th>
+            <th>Tipoactividad</th>
+            <th>Codigosence</th>
+            <th>Porcasistencia</th>
+            <th>Notaminima</th>
+            <th>Horaminima</th>
+            <th>Horatotal</th>
+            <th>Fundamentaciontec</th>
+            <th>Poblacionobjetivo</th>
+            <th>Objgenerales</th>
+            <th>Numparticipante</th>
+            <th>Metodoensenanza</th>
+            <th>Evaluacion</th>
+            <th>Infraestructura</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('course_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.nombreCurso }}</td>
+            <td>{{ entity.categoria }}</td>
+            <td>{{ entity.modalidadCurso }}</td>
+            <td>{{ entity.tipoActividad }}</td>
+            <td>{{ entity.codigoSence }}</td>
+            <td>{{ entity.porcAsistencia }}</td>
+            <td>{{ entity.notaMinima }}</td>
+            <td>{{ entity.horaMinima }}</td>
+            <td>{{ entity.horaTotal }}</td>
+            <td>{{ entity.fundamentacionTec }}</td>
+            <td>{{ entity.poblacionObjetivo }}</td>
+            <td>{{ entity.objGenerales }}</td>
+            <td>{{ entity.numParticipante }}</td>
+            <td>{{ entity.metodoEnsenanza }}</td>
+            <td>{{ entity.evaluacion }}</td>
+            <td>{{ entity.infraestructura }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('course_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('course_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('course_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}

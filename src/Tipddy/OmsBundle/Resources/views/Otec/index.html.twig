@@ -1,0 +1,59 @@
+{% extends 'TipddyOmsBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>Otec list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombreotec</th>
+            <th>Rut</th>
+            <th>Razonsocial</th>
+            <th>Reprelegal</th>
+            <th>Reprerut</th>
+            <th>Reprefono</th>
+            <th>Giro</th>
+            <th>Direccion</th>
+            <th>Emailcontacto</th>
+            <th>Contacto</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('otec_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.nombreOtec }}</td>
+            <td>{{ entity.rut }}</td>
+            <td>{{ entity.razonSocial }}</td>
+            <td>{{ entity.repreLegal }}</td>
+            <td>{{ entity.repreRut }}</td>
+            <td>{{ entity.repreFono }}</td>
+            <td>{{ entity.giro }}</td>
+            <td>{{ entity.direccion }}</td>
+            <td>{{ entity.emailContacto }}</td>
+            <td>{{ entity.contacto }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('otec_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('otec_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('otec_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}

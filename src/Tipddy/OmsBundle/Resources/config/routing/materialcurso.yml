@@ -1,0 +1,30 @@
+coursematerial:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:index" }
+
+coursematerial_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:show" }
+
+coursematerial_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:new" }
+
+coursematerial_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:create" }
+    requirements: { _method: post }
+
+coursematerial_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:edit" }
+
+coursematerial_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:update" }
+    requirements: { _method: post }
+
+coursematerial_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:MaterialCurso:delete" }
+    requirements: { _method: post }

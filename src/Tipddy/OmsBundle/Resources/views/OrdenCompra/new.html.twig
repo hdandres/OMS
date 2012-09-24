@@ -1,9 +1,9 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>Cliente creation</h1>
+<h1>OrdenCompra creation</h1>
 
-<form action="{{ path('client_create') }}" method="post" {{ form_enctype(form) }}>
+<form action="{{ path('purchaseorder_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <p>
         <button type="submit">Create</button>
@@ -12,7 +12,7 @@
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('client') }}">
+        <a href="{{ path('purchaseorder') }}">
             Back to the list
         </a>
     </li>

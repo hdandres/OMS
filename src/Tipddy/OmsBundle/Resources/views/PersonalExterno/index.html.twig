@@ -1,0 +1,63 @@
+{% extends 'TipddyOmsBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>PersonalExterno list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellidopat</th>
+            <th>Apellidomat</th>
+            <th>Profesion</th>
+            <th>Rut</th>
+            <th>Fechanacimiento</th>
+            <th>Email</th>
+            <th>Fonofijo</th>
+            <th>Fonomovil</th>
+            <th>Direccion</th>
+            <th>Estado</th>
+            <th>Institucionestudios</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('outsidestaff_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.nombre }}</td>
+            <td>{{ entity.apellidoPat }}</td>
+            <td>{{ entity.apellidoMat }}</td>
+            <td>{{ entity.profesion }}</td>
+            <td>{{ entity.rut }}</td>
+            <td>{% if entity.fechaNacimiento %}{{ entity.fechaNacimiento|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{{ entity.email }}</td>
+            <td>{{ entity.fonoFijo }}</td>
+            <td>{{ entity.fonoMovil }}</td>
+            <td>{{ entity.direccion }}</td>
+            <td>{{ entity.estado }}</td>
+            <td>{{ entity.institucionEstudios }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('outsidestaff_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('outsidestaff_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('outsidestaff_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}

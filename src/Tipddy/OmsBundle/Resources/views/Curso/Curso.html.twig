@@ -1,0 +1,39 @@
+{# src/Tipddy/OmsBundle/Resources/views/Curso/curso.html.twig #}
+{% extends 'TipddyOmsBundle::base.html.twig' %}
+
+{% block title %}Curso{% endblock%}
+
+{% block body %}
+    <header>
+        <h1>Maestro Curso</h1>
+    </header>
+
+    <p></p>
+
+    <form action="{{ path('TipddyOmsBundle_contact') }}" method="post" {{ form_enctype(form) }} class="blogger">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.nombre_curso) }}
+        {{ form_row(form.categoria) }}
+        {{ form_row(form.modalidad_curso) }}
+        {{ form_row(form.tipo_actividad) }}
+        {{ form_row(form.codigo_sence) }}
+        {{ form_row(form.porc_asistencia) }}
+        {{ form_row(form.nota_minima) }}
+        {{ form_row(form.hora_minima) }}
+        {{ form_row(form.hora_total) }}
+        {{ form_row(form.fundamentacion_tec) }}
+        {{ form_row(form.poblacion_objetivo) }}
+        {{ form_row(form.obj_generales) }}
+        {{ form_row(form.num_participante) }}
+        {{ form_row(form.metodo_ensenaza) }}
+        {{ form_row(form.evaluacion) }}
+        {{ form_row(form.infraestructura) }}
+        {{ form_row(form.otec_id) }}
+        {{ form_row(form.libro_id) }}
+        {{ form_row(form.participantes) }}
+        {{ form_row(form.orden_compra_id) }}
+                    
+        <input type="submit" value="Submit" />
+    </form>
+{% endblock %}

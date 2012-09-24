@@ -1,0 +1,55 @@
+{% extends 'TipddyOmsBundle::layout.html.twig' %}
+
+{% block body %}
+<h1>OrdenCompra list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Codigointerno</th>
+            <th>Valorparticipante</th>
+            <th>Valortotal</th>
+            <th>Numotic</th>
+            <th>Numparticipante</th>
+            <th>Codsence</th>
+            <th>Formapago</th>
+            <th>Fecha</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('purchaseorder_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.codigoInterno }}</td>
+            <td>{{ entity.valorParticipante }}</td>
+            <td>{{ entity.valorTotal }}</td>
+            <td>{{ entity.numOtic }}</td>
+            <td>{{ entity.numParticipante }}</td>
+            <td>{{ entity.codSence }}</td>
+            <td>{{ entity.formaPago }}</td>
+            <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('purchaseorder_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('purchaseorder_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('purchaseorder_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>
+{% endblock %}

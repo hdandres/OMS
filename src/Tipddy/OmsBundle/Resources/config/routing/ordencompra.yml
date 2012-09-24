@@ -1,0 +1,30 @@
+purchaseorder:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:index" }
+
+purchaseorder_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:show" }
+
+purchaseorder_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:new" }
+
+purchaseorder_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:create" }
+    requirements: { _method: post }
+
+purchaseorder_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:edit" }
+
+purchaseorder_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:update" }
+    requirements: { _method: post }
+
+purchaseorder_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:OrdenCompra:delete" }
+    requirements: { _method: post }

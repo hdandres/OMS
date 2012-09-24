@@ -145,8 +145,8 @@ class Curso
      private $infraestructura;
      
      /**
-      * @ORM\OneToOne(targetEntity="LibroClase", mappedBy="cursoId")
-      *
+      * @ORM\OneToOne(targetEntity="LibroClase")
+      * @ORM\JoinColumn(name="libro_id", referencedColumnName="id")
      */
      private $libroId;
 

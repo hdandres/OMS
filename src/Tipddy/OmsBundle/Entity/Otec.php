@@ -134,7 +134,10 @@ class Otec
      *
     */
      private $empleados;          
-
+    
+    public function __toString() {
+        return $this->getNombreOtec();
+    }
     public function __construct()
     {
         $this->cursos = new \Doctrine\Common\Collections\ArrayCollection();

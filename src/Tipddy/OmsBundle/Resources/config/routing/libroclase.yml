@@ -1,0 +1,30 @@
+classbook:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:index" }
+
+classbook_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:show" }
+
+classbook_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:new" }
+
+classbook_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:create" }
+    requirements: { _method: post }
+
+classbook_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:edit" }
+
+classbook_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:update" }
+    requirements: { _method: post }
+
+classbook_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:LibroClase:delete" }
+    requirements: { _method: post }

@@ -1,0 +1,30 @@
+participant:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:Participante:index" }
+
+participant_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "TipddyOmsBundle:Participante:show" }
+
+participant_new:
+    pattern:  /new
+    defaults: { _controller: "TipddyOmsBundle:Participante:new" }
+
+participant_create:
+    pattern:  /create
+    defaults: { _controller: "TipddyOmsBundle:Participante:create" }
+    requirements: { _method: post }
+
+participant_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "TipddyOmsBundle:Participante:edit" }
+
+participant_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "TipddyOmsBundle:Participante:update" }
+    requirements: { _method: post }
+
+participant_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "TipddyOmsBundle:Participante:delete" }
+    requirements: { _method: post }
