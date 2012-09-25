@@ -111,7 +111,7 @@ class PersonalExternoController extends Controller
 
         return $this->render('TipddyOmsBundle:PersonalExterno:edit.html.twig', array(
             'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

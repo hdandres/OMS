@@ -1,10 +1,13 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>LibroClase creation</h1>
 
 <form action="{{ path('classbook_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+    {#{ form_widget(form) }#}
+    <fieldset>
+	 <legend>Nuevo Libro</legend>
+  	 {% include 'TipddyOmsBundle:LibroClase:_form.html.twig' %}
+    </fieldset>
     <p>
         <button type="submit">Create</button>
     </p>

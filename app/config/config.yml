@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    translator:      { fallback: %locale% }
     secret:          %secret%
     charset:         UTF-8
     router:          { resource: "%kernel.root_dir%/config/routing.yml" }
@@ -20,6 +20,22 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+
+  #rodrigo
+    form:
+       resources:
+         # - 'form_div_layout.html.twig'
+         - 'TipddyOmsBundle:Formulario:form.html.twig'
+
+    globals:
+        global:
+            form_title_action_error: "Error en la Acción"
+            form_msj_action_error: "Error, revíse el formulario."
+            form_title_action_ok: "Acción Exitosa"
+            form_msj_action_ok_save: "El registro ha sido creado."
+            form_msj_action_ok_update: "El registro ha sido actualizado."
+            msj_action_ok_select: "Ha ingresado al entorno de la organización elegida."
+            msj_action_ok_envio_comentario: "Se ha enviado el mensaje, hoy vamos a contestar. Gracias!!!"
 
 # Assetic Configuration
 assetic:

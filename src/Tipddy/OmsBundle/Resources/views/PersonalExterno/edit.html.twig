@@ -3,8 +3,12 @@
 {% block body %}
 <h1>PersonalExterno edit</h1>
 
-<form action="{{ path('outsidestaff_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    {{ form_widget(edit_form) }}
+<form action="{{ path('outsidestaff_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(form) }}>
+    {#{ form_widget(edit_form) }#}
+    <fieldset>
+	 <legend>Edición Personal</legend>
+  	 {% include 'TipddyOmsBundle:PersonalExterno:_form.html.twig' %}
+    </fieldset>        
     <p>
         <button type="submit">Edit</button>
     </p>

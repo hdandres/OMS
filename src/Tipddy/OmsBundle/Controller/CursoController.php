@@ -111,7 +111,7 @@ class CursoController extends Controller
 
         return $this->render('TipddyOmsBundle:Curso:edit.html.twig', array(
             'entity'      => $entity,
-            'edit_form'   => $editForm->createView(),
+            'form'   => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
         ));
     }

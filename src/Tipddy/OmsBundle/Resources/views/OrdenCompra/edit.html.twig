@@ -3,8 +3,12 @@
 {% block body %}
 <h1>OrdenCompra edit</h1>
 
-<form action="{{ path('purchaseorder_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    {{ form_widget(edit_form) }}
+<form action="{{ path('purchaseorder_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(form) }}>
+    {#{ form_widget(form) }#}
+       <fieldset>
+             <legend>Edición Orden</legend>
+            {% include 'TipddyOmsBundle:OrdenCompra:_form.html.twig' %}
+        </fieldset>                
     <p>
         <button type="submit">Edit</button>
     </p>
@@ -19,6 +23,7 @@
     <li>
         <form action="{{ path('purchaseorder_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
+ 
             <button type="submit">Delete</button>
         </form>
     </li>

@@ -1,7 +1,14 @@
-<h1>Participante creation</h1>
+{% extends 'TipddyOmsBundle::layout.html.twig' %}
+
+{% block body %}
+
 
 <form action="{{ path('participant_create') }}" method="post" {{ form_enctype(form) }}>
-    {{ form_widget(form) }}
+    {#{ form_widget(form) }#}
+    <fieldset>
+	 <legend>Nuevo Participante</legend>
+  	 {% include 'TipddyOmsBundle:Participante:_form.html.twig' %}
+    </fieldset>        
     <p>
         <button type="submit">Create</button>
     </p>
@@ -14,3 +21,4 @@
         </a>
     </li>
 </ul>
+{% endblock %}

@@ -1,0 +1,24 @@
+ {{ form_row(form.nombre)}}
+ {{ form_row(form.apellido)}}
+ {{ form_row(form.descripcion)}}
+ {{ form_row(form.razonSocial)}}
+ {{ form_row(form.tipo) }}
+ {{ form_row(form.fechaFundacion, { 'label' : 'Fundación'}) }}
+ {{ form_row(form.direccion, { 'label' : 'Dirección'}) }}
+ {{ form_row(form.region, {'label':'Región'}) }}
+ {{ form_row(form.comuna, {'label':'Comuna'}) }}
+ {{ form_row(form.fonoFijo, { 'label' : 'Teléfono'}) }}
+ {{ form_row(form.fonoMovil, { 'label' : 'Móvil'}) }}
+ {{ form_row(form.email) }}
+ {{ form_row(form.sucursal) }}
+ {{ form_row(form.nombreEncargado, { 'label' : 'Encargado'}) }}
+ {{ form_row(form.nombreComercial) }}
+ {{ form_row(form.repreLegal, {'label':'Representante Legal'}) }}
+ {{ form_row(form.repreRut, {'label':'Rut'}) }}
+ {{ form_row(form.repreNombre, {'label':'Nombre'}) }}
+ {{ form_row(form.repreFono, {'label':'Teléfono'}) }}
+ {{ form_row(form.repreDireccion, {'label':'Dirección'}) }}
+ {{ form_row(form.repreRegion, {'label':'Región'}) }}
+ {{ form_row(form.repreComuna, {'label':'Comuna'}) }}
+ {{ form_rest(form) }}
+ {# <input type="hidden" name="url-comu" value="{{ path('callajax_comunas')}}" /> #}
