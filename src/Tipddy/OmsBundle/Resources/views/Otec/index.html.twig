@@ -1,46 +1,45 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>Otec list</h1>
+<h1>Listado Otec</h1>
 
-<table class="records_list">
+<table class="listado">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Nombreotec</th>
-            <th>Rut</th>
-            <th>Razonsocial</th>
-            <th>Reprelegal</th>
-            <th>Reprerut</th>
-            <th>Reprefono</th>
-            <th>Giro</th>
-            <th>Direccion</th>
-            <th>Emailcontacto</th>
-            <th>Contacto</th>
-            <th>Actions</th>
+            <!--<th>Id</th>-->
+            <th>Nombre otec</th>
+            <th width="8%">Rut</th>
+            <th>Razón social</th>
+            <th>Rep. legal</th>
+            <th width="8%">Rep. rut</th>
+            <th width="7%">Rep. fono</th>
+            <!--<th>Giro</th>-->
+            <th width="20%">Direccion</th>
+            <!--<th>Email contacto</th>
+            <th>Contacto</th>-->
+            <th width="10%">Acciones</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('otec_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.nombreOtec }}</td>
-            <td>{{ entity.rut }}</td>
-            <td>{{ entity.razonSocial }}</td>
-            <td>{{ entity.repreLegal }}</td>
-            <td>{{ entity.repreRut }}</td>
-            <td>{{ entity.repreFono }}</td>
-            <td>{{ entity.giro }}</td>
-            <td>{{ entity.direccion }}</td>
-            <td>{{ entity.emailContacto }}</td>
-            <td>{{ entity.contacto }}</td>
-            <td>
+            <!--<td><a href="{{ path('otec_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>-->
+            <td align="center">{{ entity.nombreOtec }}</td>
+            <td align="center">{{ entity.rut }}</td>
+            <td align="center">{{ entity.razonSocial }}</td>
+            <td align="center">{{ entity.repreLegal }}</td>
+            <td align="center">{{ entity.repreRut }}</td>
+            <td align="center">{{ entity.repreFono }}</td>
+            <!--<td align="center">{{ entity.giro }}</td>-->
+            <td align="center">{{ entity.direccion }}</td>
+            <!--<td align="center">{{ entity.emailContacto }}</td>
+            <td align="center">{{ entity.contacto }}</td>-->
+            <td width="10%">
                 <ul>
                     <li>
-                        <a href="{{ path('otec_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('otec_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('otec_show', { 'id': entity.id }) }}">Ver</a>
+                        &nbsp;&nbsp;
+                        <a href="{{ path('otec_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
             </td>
@@ -52,7 +51,7 @@
 <ul>
     <li>
         <a href="{{ path('otec_new') }}">
-            Create a new entry
+            Nuevo Registro
         </a>
     </li>
 </ul>

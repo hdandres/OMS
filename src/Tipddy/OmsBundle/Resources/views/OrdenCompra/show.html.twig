@@ -1,7 +1,7 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>OrdenCompra</h1>
+<h1>Orden de Compra</h1>
 
 <table class="record_properties">
     <tbody>
@@ -10,36 +10,36 @@
             <td>{{ entity.id }}</td>
         </tr>
         <tr>
-            <th>Codigointerno</th>
+            <th>Codigo interno</th>
             <td>{{ entity.codigoInterno }}</td>
         </tr>
         <tr>
-            <th>Valorparticipante</th>
+            <th>Valor participante</th>
             <td>{{ entity.valorParticipante }}</td>
         </tr>
         <tr>
-            <th>Valortotal</th>
+            <th>Valor total</th>
             <td>{{ entity.valorTotal }}</td>
         </tr>
         <tr>
-            <th>Numotic</th>
+            <th>Num. otic</th>
             <td>{{ entity.numOtic }}</td>
         </tr>
         <tr>
-            <th>Numparticipante</th>
+            <th>Num. participante</th>
             <td>{{ entity.numParticipante }}</td>
         </tr>
         <tr>
-            <th>Codsence</th>
+            <th>Cod. Sence</th>
             <td>{{ entity.codSence }}</td>
         </tr>
         <tr>
-            <th>Formapago</th>
+            <th>Forma pago</th>
             <td>{{ entity.formaPago }}</td>
         </tr>
         <tr>
             <th>Fecha</th>
-            <td>{{ entity.fecha|date('Y-m-d H:i:s') }}</td>
+            <td>{{ entity.fecha|date('d-m-Y') }}</td>
         </tr>
     </tbody>
 </table>
@@ -47,18 +47,18 @@
 <ul class="record_actions">
     <li>
         <a href="{{ path('purchaseorder') }}">
-            Back to the list
+            Volver a Listado
         </a>
     </li>
     <li>
         <a href="{{ path('purchaseorder_edit', { 'id': entity.id }) }}">
-            Edit
+            Editar
         </a>
     </li>
     <li>
         <form action="{{ path('purchaseorder_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
+            <button type="submit">Eliminar</button>
         </form>
     </li>
 </ul>

@@ -1,25 +1,25 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>Participante list</h1>
+<h1>Listado Participante</h1>
 
-<table class="records_list">
+<table class="listado">
     <thead>
         <tr>
-            <th>Id</th>
+            <!--<th>Id</th>-->
             <th>Nombre</th>
-            <th>Apellido_pat</th>
-            <th>Apellido_mat</th>
-            <th>Rut</th>
-            <th>Fechanacimiento</th>
-            <th>Direccion</th>
-            <th>Actions</th>
+            <th>Ap. Paterno</th>
+            <th>Ap. Materno</th>
+            <th width="8%">Rut</th>
+            <th width="10%">Fecha Nac.</th>
+            <th>Dirección</th>
+            <th width="10%">Acciones</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('participant_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <!--<td><a href="{{ path('participant_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>-->
             <td>{{ entity.nombre }}</td>
             <td>{{ entity.apellidopat }}</td>
             <td>{{ entity.apellidomat }}</td>
@@ -29,10 +29,9 @@
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('participant_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('participant_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('participant_show', { 'id': entity.id }) }}">Ver</a>
+                        &nbsp;&nbsp;
+                        <a href="{{ path('participant_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
             </td>
@@ -44,7 +43,7 @@
 <ul>
     <li>
         <a href="{{ path('participant_new') }}">
-            Create a new entry
+            Nuevo Registro
         </a>
     </li>
 </ul>

@@ -1,35 +1,35 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>Curso list</h1>
+<h1>Listado Curso</h1>
 
-<table class="records_list">
+<table class="listado">
     <thead>
         <tr>
-            <th>Id</th>
+            <!--<th>Id</th>-->
             <th>Nombrecurso</th>
             <th>Categoria</th>
-            <th>Modalidadcurso</th>
-            <th>Tipoactividad</th>
-            <th>Codigosence</th>
-            <th>Porcasistencia</th>
-            <th>Notaminima</th>
-            <th>Horaminima</th>
-            <th>Horatotal</th>
-            <th>Fundamentaciontec</th>
+            <th>Modalidad</th>
+            <th>Actividad</th>
+            <th>Cod. Sence</th>
+            <th>Asistencia (%)</th>
+            <th>Nota min.</th>
+            <th>Horas min.</th>
+            <th>Horas total</th>
+            <!--<th>Fundamentaciontec</th>
             <th>Poblacionobjetivo</th>
             <th>Objgenerales</th>
             <th>Numparticipante</th>
             <th>Metodoensenanza</th>
             <th>Evaluacion</th>
-            <th>Infraestructura</th>
-            <th>Actions</th>
+            <th>Infraestructura</th>-->
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('course_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <!--<td><a href="{{ path('course_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>-->
             <td>{{ entity.nombreCurso }}</td>
             <td>{{ entity.categoria }}</td>
             <td>{{ entity.modalidadCurso }}</td>
@@ -39,20 +39,19 @@
             <td>{{ entity.notaMinima }}</td>
             <td>{{ entity.horaMinima }}</td>
             <td>{{ entity.horaTotal }}</td>
-            <td>{{ entity.fundamentacionTec }}</td>
+            <!--<td>{{ entity.fundamentacionTec }}</td>
             <td>{{ entity.poblacionObjetivo }}</td>
             <td>{{ entity.objGenerales }}</td>
             <td>{{ entity.numParticipante }}</td>
             <td>{{ entity.metodoEnsenanza }}</td>
             <td>{{ entity.evaluacion }}</td>
-            <td>{{ entity.infraestructura }}</td>
-            <td>
+            <td>{{ entity.infraestructura }}</td>-->
+            <td align="left" width="10%">
                 <ul>
                     <li>
-                        <a href="{{ path('course_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('course_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('course_show', { 'id': entity.id }) }}">Ver</a>
+                    &nbsp;&nbsp;
+                        <a href="{{ path('course_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
             </td>
@@ -64,7 +63,7 @@
 <ul>
     <li>
         <a href="{{ path('course_new') }}">
-            Create a new entry
+            Nuevo Registro
         </a>
     </li>
 </ul>

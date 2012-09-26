@@ -1,27 +1,27 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>OrdenCompra list</h1>
+<h1>Lostado Orden de Compra</h1>
 
-<table class="records_list">
+<table class="listado">
     <thead>
         <tr>
-            <th>Id</th>
+            <!--<th>Id</th>-->
             <th>Codigointerno</th>
-            <th>Valorparticipante</th>
-            <th>Valortotal</th>
-            <th>Numotic</th>
-            <th>Numparticipante</th>
-            <th>Codsence</th>
-            <th>Formapago</th>
+            <th>Valor Participante</th>
+            <th>Valor Total</th>
+            <th>Num. Otic</th>
+            <th>Num. Participante</th>
+            <th>Cod. Sence</th>
+            <th>Forma Pago</th>
             <th>Fecha</th>
-            <th>Actions</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('purchaseorder_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <!--<td><a href="{{ path('purchaseorder_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>-->
             <td>{{ entity.codigoInterno }}</td>
             <td>{{ entity.valorParticipante }}</td>
             <td>{{ entity.valorTotal }}</td>
@@ -29,14 +29,13 @@
             <td>{{ entity.numParticipante }}</td>
             <td>{{ entity.codSence }}</td>
             <td>{{ entity.formaPago }}</td>
-            <td>{% if entity.fecha %}{{ entity.fecha|date('Y-m-d H:i:s') }}{% endif %}</td>
+            <td>{% if entity.fecha %}{{ entity.fecha|date('d-m-Y') }}{% endif %}</td>
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('purchaseorder_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('purchaseorder_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('purchaseorder_show', { 'id': entity.id }) }}">Ver</a>
+                        &nbsp;&nbsp;    
+                        <a href="{{ path('purchaseorder_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
             </td>
@@ -48,7 +47,7 @@
 <ul>
     <li>
         <a href="{{ path('purchaseorder_new') }}">
-            Create a new entry
+            Nuevo Registro
         </a>
     </li>
 </ul>

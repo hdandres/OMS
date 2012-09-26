@@ -1,50 +1,49 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>PersonalExterno list</h1>
+<h1>Listado Personal Externo</h1>
 
-<table class="records_list">
+<table class="listado">
     <thead>
         <tr>
-            <th>Id</th>
+            <!--<th>Id</th>-->
             <th>Nombre</th>
-            <th>Apellidopat</th>
-            <th>Apellidomat</th>
+            <th>Ap. Paterno</th>
+            <th>Ap. Materno</th>
             <th>Profesion</th>
-            <th>Rut</th>
-            <th>Fechanacimiento</th>
+            <th width="8%">Rut</th>
+            <th width="8%">Fecha nac.</th>
             <th>Email</th>
-            <th>Fonofijo</th>
+            <!--<th>Fonofijo</th>
             <th>Fonomovil</th>
             <th>Direccion</th>
             <th>Estado</th>
-            <th>Institucionestudios</th>
-            <th>Actions</th>
+            <th>Institucionestudios</th>-->
+            <th width="10%">Acciones</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('outsidestaff_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
-            <td>{{ entity.nombre }}</td>
-            <td>{{ entity.apellidoPat }}</td>
-            <td>{{ entity.apellidoMat }}</td>
-            <td>{{ entity.profesion }}</td>
-            <td>{{ entity.rut }}</td>
-            <td>{% if entity.fechaNacimiento %}{{ entity.fechaNacimiento|date('Y-m-d H:i:s') }}{% endif %}</td>
-            <td>{{ entity.email }}</td>
-            <td>{{ entity.fonoFijo }}</td>
+            <!--<td><a href="{{ path('outsidestaff_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>-->
+            <td align="center">{{ entity.nombre }}</td>
+            <td align="center">{{ entity.apellidoPat }}</td>
+            <td align="center">{{ entity.apellidoMat }}</td>
+            <td align="center">{{ entity.profesion }}</td>
+            <td align="center">{{ entity.rut }}</td>
+            <td align="center">{% if entity.fechaNacimiento %}{{ entity.fechaNacimiento|date('d-m-Y') }}{% endif %}</td>
+            <td align="center">{{ entity.email }}</td>
+            <!--<td>{{ entity.fonoFijo }}</td>
             <td>{{ entity.fonoMovil }}</td>
             <td>{{ entity.direccion }}</td>
             <td>{{ entity.estado }}</td>
-            <td>{{ entity.institucionEstudios }}</td>
+            <td>{{ entity.institucionEstudios }}</td>-->
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('outsidestaff_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('outsidestaff_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('outsidestaff_show', { 'id': entity.id }) }}">Ver</a>
+                          &nbsp;&nbsp;  
+                        <a href="{{ path('outsidestaff_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
             </td>
@@ -56,7 +55,7 @@
 <ul>
     <li>
         <a href="{{ path('outsidestaff_new') }}">
-            Create a new entry
+            Nuevo Registro
         </a>
     </li>
 </ul>

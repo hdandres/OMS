@@ -1,32 +1,31 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>MaterialCurso list</h1>
+<h1>Listado Material de Cursos</h1>
 
-<table class="records_list">
+<table class="listado">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Descripcion</th>
+            <!--<th>Id</th>-->
+            <th>Descripción</th>
             <th>Cantidad</th>
-            <th>Tipomaterial</th>
-            <th>Actions</th>
+            <th>Tipo Material</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('coursematerial_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <!--<td><a href="{{ path('coursematerial_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>-->
             <td>{{ entity.descripcion }}</td>
             <td>{{ entity.cantidad }}</td>
             <td>{{ entity.tipoMaterial }}</td>
-            <td>
+            <td align="left">
                 <ul>
                     <li>
-                        <a href="{{ path('coursematerial_show', { 'id': entity.id }) }}">show</a>
-                    </li>
-                    <li>
-                        <a href="{{ path('coursematerial_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('coursematerial_show', { 'id': entity.id }) }}">Ver</a>
+                        &nbsp;&nbsp;    
+                        <a href="{{ path('coursematerial_edit', { 'id': entity.id }) }}">Editar</a>
                     </li>
                 </ul>
             </td>
@@ -38,7 +37,7 @@
 <ul>
     <li>
         <a href="{{ path('coursematerial_new') }}">
-            Create a new entry
+            Nuevo Registro
         </a>
     </li>
 </ul>

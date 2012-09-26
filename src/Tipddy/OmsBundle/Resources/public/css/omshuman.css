@@ -1175,7 +1175,7 @@ div.acciones{
 
 .listado th{
     line-height:1.3em;
-
+    border: 1px solid;
 }
 
 .listado td, .listado th{
@@ -2166,4 +2166,33 @@ div#envioinformacion textarea {
 
 div#envioinformacion {
 height: 400px;
+}
+
+.tb_grid_factura{
+        border-width: 0px;
+        border-spacing: 2px;
+        border-style: outset;
+        border-color: gray;
+        border-collapse: separate;
+        background-color: white;
+}
+
+
+.tb_grid_factura th{
+        border-width: 1px;
+        padding: 1px;
+        border-style: outset;
+        border-color: gray;
+        background-color: gray;
+        -moz-border-radius: ;
+        color:white;
+}
+
+.tb_grid_factura td{
+        border-width: 1px;
+        padding: 0px;
+        border-style: outset;
+        border-color: gray;
+        background-color: white;
+        -moz-border-radius: ;
 }
