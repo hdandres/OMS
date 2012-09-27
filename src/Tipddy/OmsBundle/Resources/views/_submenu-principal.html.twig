@@ -1,0 +1,24 @@
+<ul>
+ {% set subtab = app.request.attributes.get('_route') %}
+ {% set opt_routing = ['client', 'course', 'otec', 'participant', 'classbook',
+                      'coursematerial', 'purchaseorder', 'outsidestaff'] %}
+
+  {% if route_active(subtab, 'panel') %}
+   
+      <li><a href="" class="cat-destacada">Seleccione Mantenedor</a></li>
+  
+  
+  {% elseif route_active(subtab, opt_routing) %}
+  
+   <li><a href="{{ path('client') }}" {{ route_active(subtab, 'client') ? 'class="cat-destacada"' : '' }}>Clientes</a></li>
+   <li><a href="{{ path('course')}}" {{ route_active(subtab, 'course') ? 'class="cat-destacada"' : '' }}>Cursos</a></li>
+   <li><a href="{{ path('otec')}}" {{ route_active(subtab, 'otec') ? 'class="cat-destacada"' : '' }}>Otec</a></li>
+   <li><a href="{{ path('participant')}}" {{ route_active(subtab, 'participant') ? 'class="cat-destacada"' : '' }}>Participant</a></li>
+   <li><a href="{{ path('classbook')}}" {{ route_active(subtab, 'classbook') ? 'class="cat-destacada"' : '' }}>Libro de clases</a></li>
+   <li><a href="{{ path('coursematerial')}}" {{ route_active(subtab, 'coursematerial') ? 'class="cat-destacada"' : '' }}>Material de Cursos</a></li>
+   <li><a href="{{ path('purchaseorder')}}" {{ route_active(subtab, 'purchaseorder') ? 'class="cat-destacada"' : '' }}>Orden de Compra</a></li>
+   <li><a href="{{ path('outsidestaff')}}" {{ route_active(subtab, 'outsidestaff') ? 'class="cat-destacada"' : '' }}>Personal Externo</a></li>
+  {% endif %}
+  
+    
+ </ul>

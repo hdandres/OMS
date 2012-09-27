@@ -1,7 +1,6 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>Cliente edit</h1>
 
 <form action="{{ path('client_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(form) }}>
     {#{ form_widget(form) }#}

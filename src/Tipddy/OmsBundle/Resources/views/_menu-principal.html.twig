@@ -1,0 +1,12 @@
+{% set tab = app.request.attributes.get('_route') %}
+{% set opt_routing = ['client', 'course', 'otec', 'participant', 'classbook',
+                      'coursematerial', 'purchaseorder', 'outsidestaff'] %}
+
+<ul id="ul-menuprincipal" class="nav sf-js-enabled sf-shadow" style="display: block; visibility: visible;">
+     <li id="m-panel" {{ route_active(tab, 'dashboard') ? 'class="sfHover"' : '' }}>
+        <a href="{{ path('dashboard') }}">Panel</a>
+     </li>
+     <li id="m-sistema" {{ route_active(tab, opt_routing) ? 'class="sfHover"' : '' }}>
+       <a href="{{ path('client')}}" class="sf-with-ul">Maestros</a>
+    </li>
+</ul>

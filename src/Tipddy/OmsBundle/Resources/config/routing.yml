@@ -33,3 +33,7 @@ TipddyOmsBundle_purchaseorder:
 TipddyOmsBundle_outsidestaff:
     resource: "@TipddyOmsBundle/Resources/config/routing/personalexterno.yml"
     prefix:   /outsidestaff
+
+TipddyOmsBundle_dashboard:
+    resource: "@TipddyOmsBundle/Resources/config/routing/panel.yml"
+    prefix:   /dashboard

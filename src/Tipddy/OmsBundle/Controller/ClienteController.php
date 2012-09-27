@@ -141,7 +141,7 @@ class ClienteController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('cliente_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('client_edit', array('id' => $id)));
         }
 
         return $this->render('TipddyOmsBundle:Cliente:edit.html.twig', array(

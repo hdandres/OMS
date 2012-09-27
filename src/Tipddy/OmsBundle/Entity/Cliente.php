@@ -35,6 +35,12 @@ class Cliente
      * @Assert\NotBlank()
     */
      private $apellido;
+
+    /**
+     * @ORM\Column(name="rut_clte", type="string", length=12, nullable=true)
+     *
+    */
+     private $rutClte;
       
     /**
      * @ORM\Column(name="descripcion", type="string", length=255, nullable=false)
@@ -610,5 +616,25 @@ class Cliente
     public function getComuna()
     {
         return $this->comuna;
+    }
+
+    /**
+     * Set rutClte
+     *
+     * @param string $rutClte
+     */
+    public function setRutClte($rutClte)
+    {
+        $this->rutClte = $rutClte;
+    }
+
+    /**
+     * Get rutClte
+     *
+     * @return string 
+     */
+    public function getRutClte()
+    {
+        return $this->rutClte;
     }
 }

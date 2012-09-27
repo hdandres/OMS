@@ -2,6 +2,19 @@
 {% extends '::base.html.twig' %}
 
 {% block stylesheets %}
+     <div>
+          {% include 'TipddyOmsBundle::_menu-principal.html.twig' %}
+      </div>
+
+      <div class="page">
+          <div class="pageWrap">
+              <div class="nav_sep">
+                 <div id="top_nav">
+              {% include 'TipddyOmsBundle::_submenu-principal.html.twig' %}
+                 </div>
+              </div>
+           </div> 
+       </div>       
     {{ parent() }}
     <link href="{{ asset('bundles/tipddyoms/css/omshuman.css') }}" type="text/css" rel="stylesheet" />
 {% endblock %}

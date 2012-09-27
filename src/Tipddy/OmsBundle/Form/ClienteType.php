@@ -13,6 +13,7 @@ class ClienteType extends AbstractType
             ->add('nombre')
             ->add('apellido')
             ->add('descripcion')
+            ->add('rutClte')
             ->add('razonSocial')
             ->add('tipo')
             ->add('fechaFundacion', null, array("years" => range(1990,2012)))

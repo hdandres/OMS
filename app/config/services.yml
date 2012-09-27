@@ -1,0 +1,5 @@
+services:
+    twig.extension.tipddy.oms.util:
+        class: Tipddy\OmsBundle\Twig\Extension\UtilExtension
+        tags:
+            - { name: twig.extension }
