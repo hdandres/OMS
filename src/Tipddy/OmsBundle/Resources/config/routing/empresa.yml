@@ -1,0 +1,3 @@
+empresa:
+    pattern:  /
+    defaults: { _controller: "TipddyOmsBundle:Empresa:index" }

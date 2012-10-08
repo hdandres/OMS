@@ -6,7 +6,10 @@
      <li id="m-panel" {{ route_active(tab, 'dashboard') ? 'class="sfHover"' : '' }}>
         <a href="{{ path('dashboard') }}">Panel</a>
      </li>
-     <li id="m-sistema" {{ route_active(tab, opt_routing) ? 'class="sfHover"' : '' }}>
+     <li id="m-panel" {{ route_active(tab, opt_routing) ? 'class="sfHover"' : '' }}>
        <a href="{{ path('client')}}" class="sf-with-ul">Maestros</a>
     </li>
+     <li id="m-panel" {{ route_active(tab, 'empresa') ? 'class="sfHover"' : '' }}>
+       <a href="{{ path('empresa')}}" class="sf-with-ul">Empresa</a>
+    </li>    
 </ul>

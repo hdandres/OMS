@@ -10,6 +10,7 @@ class OtecType extends AbstractType
     public function buildForm(FormBuilder $builder, array $options)
     {
         $builder
+            ->add('id')
             ->add('nombreOtec')
             ->add('rut')
             ->add('razonSocial')

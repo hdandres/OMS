@@ -1,29 +1,11 @@
-{% extends 'TipddyOmsBundle::layout.html.twig' %}
-
-{% block body %}
-
 <form action="{{ path('otec_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(form) }}>
     {#{ form_widget(form) }#}
-         <fieldset>
-             <legend>Edición Otec</legend>
+         <fieldset style="width:70%">
+             <legend>{{ entity.nombreOtec }}</legend>
             {% include 'TipddyOmsBundle:Otec:_form.html.twig' %}
         </fieldset>               
     <p>
-        <button type="submit">Editar</button>
+        <button type="submit">Guardar Cambios</button>
     </p>
 </form>
 
-<ul class="record_actions">
-    <li>
-        <a href="{{ path('otec') }}">
-            Volver a Listado
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('otec_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Eliminar</button>
-        </form>
-    </li>
-</ul>
-{% endblock %}

@@ -1,7 +1,7 @@
 {% extends 'TipddyOmsBundle::layout.html.twig' %}
 
 {% block body %}
-<h1>Otec</h1>
+<h1>{{ entity.nombreOtec }}</h1>
 
 <table class="record_properties">
     <tbody>
@@ -10,7 +10,7 @@
             <td>{{ entity.id }}</td>
         </tr>
         <tr>
-            <th>Nombreotec</th>
+            <th>Nombre otec</th>
             <td>{{ entity.nombreOtec }}</td>
         </tr>
         <tr>
@@ -65,8 +65,8 @@
     </li>
     <li>
         <form action="{{ path('otec_delete', { 'id': entity.id }) }}" method="post">
-            {{ form_widget(delete_form) }}
-            <button type="submit">Eliminar</button>
+            {#{ form_widget(delete_form) }#}
+            <!--<button type="submit">Eliminar</button>-->
         </form>
     </li>
 </ul>

@@ -37,3 +37,7 @@ TipddyOmsBundle_outsidestaff:
 TipddyOmsBundle_dashboard:
     resource: "@TipddyOmsBundle/Resources/config/routing/panel.yml"
     prefix:   /dashboard
+
+TipddyOmsBundle_empresa:
+    resource: "@TipddyOmsBundle/Resources/config/routing/empresa.yml"
+    prefix:   /empresa
